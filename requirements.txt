@@ -1,0 +1,11 @@
+pip~=23.3.1
+fastapi~=0.103.2
+pandas
+numpy
+uvicorn[standard]
+gunicorn
+python-dotenv~=0.19.1
+python-multipart~=0.0.5
+pydantic
+scipy
+scikit-learn
