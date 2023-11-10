@@ -35,7 +35,7 @@ def predict_category(narration: str) -> str:
 
 
 ##try out how to use this for multiple features
-@app.get("/predict")
+@app.get("/")
 def predict(narration: str = Query(default=None, description="text Narration")):
     if narration is None:
         return {"error": "Please provide the 'text Narration' parameter."}
@@ -43,7 +43,7 @@ def predict(narration: str = Query(default=None, description="text Narration")):
     result = predict_category(narration)
     return {"prediction": result}
 
-@app.post("/predict")
+@app.post("/")
 def predict(input_data: PredictionInput):
     try:
         # Assuming predict_category is your function for making predictions
